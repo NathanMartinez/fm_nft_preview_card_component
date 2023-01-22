@@ -1,0 +1,155 @@
+:root {
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    /* Neutral */
+    /* (main BG) */
+    --bg-main-dark-blue: hsl(217, 54%, 11%);
+    /* (card BG) */
+    --bg-card-dark-blue: hsl(216, 50%, 16%);
+    /* (line) */
+    --line-dark-blue: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    background-color: var(--bg-main-dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card,
+.card-image,
+.overlay {
+    border-radius: 0.7rem;
+}
+
+.card {
+    width: 350px;
+    overflow: hidden;
+    padding: 1.5rem;
+    background-color: var(--bg-card-dark-blue);
+    position: relative;
+
+}
+
+a,
+a:active {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.card-image {
+    width: 100%;
+}
+
+.card-image:hover~.overlay,
+.overlay:hover {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    width: 302px;
+    height: 302px;
+    display: none;
+    background: url("./images/icon-view.svg") center no-repeat, hsla(178, 100%, 50%, 0.5);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body a {
+    font-size: 1.38rem;
+    margin: 1.25rem 0;
+}
+
+.card-body p {
+    line-height: 1.5rem;
+    font-weight: 300;
+    color: var(--soft-blue);
+}
+
+.card-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+}
+
+.price,
+.time {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 1rem;
+    color: var(--cyan);
+}
+
+.time {
+    color: var(--soft-blue);
+    font-weight: 400;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    color: var(--soft-blue);
+    border-top: 1px solid var(--line-dark-blue);
+    gap: 0.5rem;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+}
+
+.card a:hover {
+    cursor: pointer;
+    color: var(--cyan);
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: var(--soft-blue);
+}
+
+.attribution a:hover {
+    color: var(--cyan);
+}
